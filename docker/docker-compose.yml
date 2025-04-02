@@ -1,0 +1,14 @@
+name: mueknguang
+services:
+  mueknguang-pg:
+    image: ghcr.io/thanakrit-j/postgres:16.8-th
+    container_name: mueknguang-postgres
+    environment:
+      TZ: Asia/Bangkok
+      POSTGRES_PASSWORD: paletiger50
+      LANG: th_TH.UTF-8
+      PGDATA: /var/lib/postgresql/16
+    ports:
+      - 5432:5432
+    volumes:
+      - /pgdata:/var/lib/postgresql
